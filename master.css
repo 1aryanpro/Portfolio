@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto+Mono&display=swap");
+
+:root {
+  --title: "Montserrat", sans-serif;
+  --content: "Roboto Mono", monospace;
+
+  --dark: #101010;
+  --light: #eeeeee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--light);
+  font-family: var(--content);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title);
+}
+
+.pop {
+  border-radius: 12px;
+  box-shadow: -12px -12px 12px 0 rgba(25, 25, 25, 1),
+    12px 12px 12px 0 rgba(0, 0, 0, 1);
+}
+
+body {
+  background: var(--dark);
+}
+
+.container {
+  width: 500px;
+  padding-top: 15px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+nav {
+  text-align: center;
+  padding: 20px 0;
+  width: 460px;
+  margin: auto;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
