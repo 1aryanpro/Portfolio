@@ -4,6 +4,9 @@ $title: "Montserrat", sans-serif;
 $content: "Roboto Mono", monospace;
 
 $dark: #101010;
+$lightGrey: #6b6c6c;
+$midGrey: #484949;
+$darkGrey: #212222;
 $light: #eeeeee;
 
 * {
@@ -22,74 +25,102 @@ h6 {
   font-family: $title;
 }
 
-@mixin pop {
-  border-radius: 12px;
-  box-shadow: -12px -12px 12px 0 rgba(25, 25, 25, 1),
-    12px 12px 12px 0 rgba(0, 0, 0, 1);
-}
-
-@mixin small-pop {
-  border-radius: 3px;
-  box-shadow: -6px -6px 6px 0 rgba(25, 25, 25, 1),
-    6px 6px 6px 0 rgba(0, 0, 0, 1);
+.container {
+  width: 80%;
+  margin: auto;
 }
 
 body {
   background: $dark;
 }
 
-.content {
-  width: 400px;
-  padding-top: 15px;
-  margin: auto;
-}
+$border-height: 5px;
+@keyframes rainbow-bottom-border {
+  0% {
+    border-bottom: hsl(0,75%,50%) solid $border-height;
+  }
 
-.container {
-  width: 90%;
-  margin: auto;
-}
+  10% {
+    border-bottom: hsl(35,75%,50%) solid $border-height;
+  }
 
-header {
-  width: 460px;
-  margin: auto;
-  text-align: center;
-  padding: 10px 0;
-  @include pop();
+  20% {
+    border-bottom: hsl(70,75%,50%) solid $border-height;
+  }
+
+  30% {
+    border-bottom: hsl(105,75%,50%) solid $border-height;
+  }
+
+  40% {
+    border-bottom: hsl(140,75%,50%) solid $border-height;
+  }
+
+  50% {
+    border-bottom: hsl(175,75%,50%) solid $border-height;
+  }
+
+  60% {
+    border-bottom: hsl(210,75%,50%) solid $border-height;
+  }
+
+  70% {
+    border-bottom: hsl(245,75%,60%) solid $border-height;
+  }
+
+  80% {
+    border-bottom: hsl(280,75%,60%) solid $border-height;
+  }
+
+  90% {
+    border-bottom: hsl(315,75%,50%) solid $border-height;
+  }
+
+  100% {
+    border-bottom: hsl(350,75%,50%) solid $border-height;
+  }
 }
 
 nav {
-  text-align: center;
-  padding: 20px 0;
-  width: 440px;
-  margin: 20px auto 0;
-  @include pop();
+  background: $darkGrey;
+  border-bottom: red $border-height solid;
+  animation: rainbow-bottom-border linear 15s infinite;
+  margin-bottom: 30px;
 
   ul {
     list-style-type: none;
-  }
+    overflow: hidden;
 
-  li {
-    display: inline;
-    margin-right: 10px;
-    padding: 8px;
-    border-radius: 3px;
-    transition: box-shadow 200ms ease-in-out;
-  }
+    li {
+      padding: 14px 16px;
+      
+      * {
+        font-family: $title;
+      }
 
-  li:hover, li.active {
-    @include small-pop();
-  }
+      a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 14px 16px;
+      }
 
-  a {
-    text-decoration: none;
-  }
-}
+      &:not(.brand) {
+        float: right;
 
-article#home {
-  text-align: center;
-  margin-top: 40px;
+        &:hover {
+          background: $dark;
+        }
 
-  h3 {
-    margin: 30px 0 10px;
+        &.active {
+          background: $dark;
+          font-weight: bold;
+        }
+      }
+
+      &.brand {
+        float: left;
+      }
+    }
   }
 }

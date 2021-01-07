@@ -15,62 +15,84 @@ h6 {
   font-family: "Montserrat", sans-serif;
 }
 
+.container {
+  width: 80%;
+  margin: auto;
+}
+
 body {
   background: #101010;
 }
 
-.content {
-  width: 400px;
-  padding-top: 15px;
-  margin: auto;
+@keyframes rainbow-bottom-border {
+  0% {
+    border-bottom: #df2020 solid 5px;
+  }
+  10% {
+    border-bottom: #df8f20 solid 5px;
+  }
+  20% {
+    border-bottom: #bfdf20 solid 5px;
+  }
+  30% {
+    border-bottom: #50df20 solid 5px;
+  }
+  40% {
+    border-bottom: #20df60 solid 5px;
+  }
+  50% {
+    border-bottom: #20dfcf solid 5px;
+  }
+  60% {
+    border-bottom: #2080df solid 5px;
+  }
+  70% {
+    border-bottom: #594de6 solid 5px;
+  }
+  80% {
+    border-bottom: #b34de6 solid 5px;
+  }
+  90% {
+    border-bottom: #df20af solid 5px;
+  }
+  100% {
+    border-bottom: #df2040 solid 5px;
+  }
 }
-
-.container {
-  width: 90%;
-  margin: auto;
-}
-
-header {
-  width: 460px;
-  margin: auto;
-  text-align: center;
-  padding: 10px 0;
-  border-radius: 12px;
-  box-shadow: -12px -12px 12px 0 #191919, 12px 12px 12px 0 black;
-}
-
 nav {
-  text-align: center;
-  padding: 20px 0;
-  width: 440px;
-  margin: 20px auto 0;
-  border-radius: 12px;
-  box-shadow: -12px -12px 12px 0 #191919, 12px 12px 12px 0 black;
+  background: #212222;
+  border-bottom: red 5px solid;
+  animation: rainbow-bottom-border linear 15s infinite;
+  margin-bottom: 30px;
 }
 nav ul {
   list-style-type: none;
+  overflow: hidden;
 }
-nav li {
-  display: inline;
-  margin-right: 10px;
-  padding: 8px;
-  border-radius: 3px;
-  transition: box-shadow 200ms ease-in-out;
+nav ul li {
+  padding: 14px 16px;
 }
-nav li:hover, nav li.active {
-  border-radius: 3px;
-  box-shadow: -6px -6px 6px 0 #191919, 6px 6px 6px 0 black;
+nav ul li * {
+  font-family: "Montserrat", sans-serif;
 }
-nav a {
-  text-decoration: none;
-}
-
-article#home {
+nav ul li a {
+  display: block;
   text-align: center;
-  margin-top: 40px;
+  text-decoration: none;
+  padding: 14px 16px;
 }
-article#home h3 {
-  margin: 30px 0 10px;
+nav ul li:not(.brand) {
+  float: right;
+}
+nav ul li:not(.brand):hover {
+  background: #101010;
+}
+nav ul li:not(.brand).active {
+  background: #101010;
+  font-weight: bold;
+}
+nav ul li.brand {
+  float: left;
 }
 
 /*# sourceMappingURL=master.css.map */
