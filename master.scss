@@ -82,9 +82,9 @@ $border-height: 5px;
 }
 
 nav {
-  background: $darkGrey;
+  background: $dark;
   border-bottom: red $border-height solid;
-  animation: rainbow-bottom-border linear 15s infinite;
+  animation: rainbow-bottom-border linear 20s infinite;
   margin-bottom: 30px;
 
   ul {
@@ -109,11 +109,11 @@ nav {
         float: right;
 
         &:hover {
-          background: $dark;
+          background: $darkGrey;
         }
 
         &.active {
-          background: $dark;
+          background: $darkGrey;
           font-weight: bold;
         }
       }

@@ -60,9 +60,9 @@ body {
   }
 }
 nav {
-  background: #212222;
+  background: #101010;
   border-bottom: red 5px solid;
-  animation: rainbow-bottom-border linear 15s infinite;
+  animation: rainbow-bottom-border linear 20s infinite;
   margin-bottom: 30px;
 }
 nav ul {
@@ -85,10 +85,10 @@ nav ul li:not(.brand) {
   float: right;
 }
 nav ul li:not(.brand):hover {
-  background: #101010;
+  background: #212222;
 }
 nav ul li:not(.brand).active {
-  background: #101010;
+  background: #212222;
   font-weight: bold;
 }
 nav ul li.brand {
