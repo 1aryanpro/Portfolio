@@ -69,7 +69,8 @@ nav ul {
   overflow: hidden;
 }
 nav ul li {
-  padding: 14px 16px;
+  padding: 14px 0;
+  width: 120px;
 }
 nav ul li * {
   font-family: "Montserrat", sans-serif;
@@ -79,15 +80,16 @@ nav ul li a {
   text-align: center;
   text-decoration: none;
   padding: 14px 16px;
+  height: 100%;
 }
 nav ul li:not(.brand) {
   float: right;
 }
 nav ul li:not(.brand):hover {
-  background: #212222;
+  background: #222222;
 }
 nav ul li:not(.brand).active {
-  background: #212222;
+  background: #222222;
   font-weight: bold;
 }
 nav ul li.brand {
@@ -135,13 +137,43 @@ nav ul li.brand {
   align-items: center;
   text-align: center;
   height: 70vh;
-  background: #590d0d;
-  animation: rainbow-bg 20s linear infinite;
   margin-bottom: 30px;
 }
+.landing .jumbotron {
+  background-image: url("../assets/landing_bg.jpg");
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  background-position: center;
+  background-size: cover;
+}
 .landing h1 {
-  font-size: 55px;
+  font-size: 90px;
   font-weight: bolder;
+}
+
+#portfolio-card-list {
+  margin-top: 25px;
+}
+
+.portfolio-card {
+  background-color: #222222;
+  padding: 15px;
+  width: 30vh;
+  height: 350px;
+  border-radius: 10px;
+}
+.portfolio-card img {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.portfolio-card .title {
+  font-size: 1.75em;
 }
 
 /*# sourceMappingURL=master.css.map */
