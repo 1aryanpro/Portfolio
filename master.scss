@@ -34,58 +34,26 @@ body {
   background: $dark;
 }
 
+$rainbow-cycle-duration: 20s;
 $border-height: 5px;
 @keyframes rainbow-bottom-border {
-  0% {
-    border-bottom: hsl(0,75%,50%) solid $border-height;
-  }
-
-  10% {
-    border-bottom: hsl(35,75%,50%) solid $border-height;
-  }
-
-  20% {
-    border-bottom: hsl(70,75%,50%) solid $border-height;
-  }
-
-  30% {
-    border-bottom: hsl(105,75%,50%) solid $border-height;
-  }
-
-  40% {
-    border-bottom: hsl(140,75%,50%) solid $border-height;
-  }
-
-  50% {
-    border-bottom: hsl(175,75%,50%) solid $border-height;
-  }
-
-  60% {
-    border-bottom: hsl(210,75%,50%) solid $border-height;
-  }
-
-  70% {
-    border-bottom: hsl(245,75%,60%) solid $border-height;
-  }
-
-  80% {
-    border-bottom: hsl(280,75%,60%) solid $border-height;
-  }
-
-  90% {
-    border-bottom: hsl(315,75%,50%) solid $border-height;
-  }
-
-  100% {
-    border-bottom: hsl(350,75%,50%) solid $border-height;
-  }
+  0% { border-bottom: hsl(0,75%,50%) solid $border-height; }
+  10% { border-bottom: hsl(35,75%,50%) solid $border-height; }
+  20% { border-bottom: hsl(70,75%,50%) solid $border-height; }
+  30% { border-bottom: hsl(105,75%,50%) solid $border-height; }
+  40% { border-bottom: hsl(140,75%,50%) solid $border-height; }
+  50% { border-bottom: hsl(175,75%,50%) solid $border-height; }
+  60% { border-bottom: hsl(210,75%,50%) solid $border-height; }
+  70% { border-bottom: hsl(245,75%,60%) solid $border-height; }
+  80% { border-bottom: hsl(280,75%,60%) solid $border-height; }
+  90% { border-bottom: hsl(315,75%,50%) solid $border-height; }
+  100% { border-bottom: hsl(350,75%,50%) solid $border-height; }
 }
 
 nav {
   background: $dark;
   border-bottom: red $border-height solid;
-  animation: rainbow-bottom-border linear 20s infinite;
-  margin-bottom: 30px;
+  animation: rainbow-bottom-border linear $rainbow-cycle-duration infinite;
 
   ul {
     list-style-type: none;
@@ -122,5 +90,36 @@ nav {
         float: left;
       }
     }
+  }
+}
+
+@keyframes rainbow-bg {
+  0% { background: hsl(0,75%,20%); }
+  10% { background: hsl(35,75%,20%); }
+  20% { background: hsl(70,75%,20%); }
+  30% { background: hsl(105,75%,20%); }
+  40% { background: hsl(140,75%,20%); }
+  50% { background: hsl(175,75%,20%); }
+  60% { background: hsl(210,75%,20%); }
+  70% { background: hsl(245,75%,20%); }
+  80% { background: hsl(280,75%,20%); }
+  90% { background: hsl(315,75%,20%); }
+  100% { background: hsl(350,75%,20%); }
+}
+
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 70vh;
+  background: hsl(0, 75%, 20%);
+  animation: rainbow-bg $rainbow-cycle-duration linear infinite;
+  margin-bottom: 30px;
+
+
+  h1 {
+    font-size: 55px;
+    font-weight: bolder;
   }
 }

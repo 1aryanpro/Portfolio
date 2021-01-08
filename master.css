@@ -63,7 +63,6 @@ nav {
   background: #101010;
   border-bottom: red 5px solid;
   animation: rainbow-bottom-border linear 20s infinite;
-  margin-bottom: 30px;
 }
 nav ul {
   list-style-type: none;
@@ -93,6 +92,56 @@ nav ul li:not(.brand).active {
 }
 nav ul li.brand {
   float: left;
+}
+
+@keyframes rainbow-bg {
+  0% {
+    background: #590d0d;
+  }
+  10% {
+    background: #59390d;
+  }
+  20% {
+    background: #4d590d;
+  }
+  30% {
+    background: #20590d;
+  }
+  40% {
+    background: #0d5926;
+  }
+  50% {
+    background: #0d5953;
+  }
+  60% {
+    background: #0d3359;
+  }
+  70% {
+    background: #130d59;
+  }
+  80% {
+    background: #400d59;
+  }
+  90% {
+    background: #590d46;
+  }
+  100% {
+    background: #590d1a;
+  }
+}
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 70vh;
+  background: #590d0d;
+  animation: rainbow-bg 20s linear infinite;
+  margin-bottom: 30px;
+}
+.landing h1 {
+  font-size: 55px;
+  font-weight: bolder;
 }
 
 /*# sourceMappingURL=master.css.map */
