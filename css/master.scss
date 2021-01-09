@@ -114,7 +114,7 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 70vh;
+  height: 60vh;
   margin-bottom: 30px;
 
   .jumbotron {
@@ -134,6 +134,11 @@ nav {
     font-size: 90px;
     font-weight: bolder;
   }
+}
+
+.sm-landing {
+  @extend .landing;
+  height: 20vh;
 }
 
 #portfolio-card-list {

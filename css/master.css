@@ -131,15 +131,15 @@ nav ul li.brand {
     background: #590d1a;
   }
 }
-.landing {
+.landing, .sm-landing {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 70vh;
+  height: 60vh;
   margin-bottom: 30px;
 }
-.landing .jumbotron {
+.landing .jumbotron, .sm-landing .jumbotron {
   background-image: url("../assets/landing_bg.jpg");
   display: flex;
   width: 80%;
@@ -150,9 +150,13 @@ nav ul li.brand {
   background-position: center;
   background-size: cover;
 }
-.landing h1 {
+.landing h1, .sm-landing h1 {
   font-size: 90px;
   font-weight: bolder;
+}
+
+.sm-landing {
+  height: 20vh;
 }
 
 #portfolio-card-list {
