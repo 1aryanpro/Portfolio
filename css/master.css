@@ -158,6 +158,9 @@ nav ul li.brand {
 .sm-landing {
   height: 20vh;
 }
+.sm-landing .jumbotron {
+  background-image: url("../assets/stripes.jpg");
+}
 
 #portfolio-card-list {
   margin-top: 25px;
@@ -178,6 +181,25 @@ nav ul li.brand {
 }
 .portfolio-card .title {
   font-size: 1.75em;
+}
+
+#portfolio-page {
+  margin-top: 35px;
+  width: 50%;
+}
+#portfolio-page h1 {
+  font-size: 3.5em;
+  font-weight: bold;
+  text-align: center;
+}
+#portfolio-page img {
+  width: 100%;
+  height: 50vh;
+  margin: 35px 0;
+}
+#portfolio-page p {
+  margin-bottom: 15px;
+  font-size: 1.1em;
 }
 
 /*# sourceMappingURL=master.css.map */
