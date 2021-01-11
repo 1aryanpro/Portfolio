@@ -60,7 +60,6 @@ nav {
     overflow: hidden;
 
     li {
-      padding: 14px 0;
       width: 120px;
       
       * {
@@ -71,7 +70,7 @@ nav {
         display: block;
         text-align: center;
         text-decoration: none;
-        padding: 14px 16px;
+        padding: 28px 16px;
         height: 100%;
       }
 
@@ -90,6 +89,7 @@ nav {
 
       &.brand {
         float: left;
+        padding: 14px 0;
       }
     }
   }
@@ -136,6 +136,41 @@ nav {
   }
 }
 
+#cta-cards {
+  display: flex;
+  height: 20vh;
+
+  .cta-card {
+    flex: 45%;
+    padding: 20px;
+    text-align: center;
+    background-image: url("/assets/stripes.jpg");
+
+    h1 {
+      font-size: 3em;
+    }
+
+    button {
+      font-size: 2em;
+      margin-top: 15px;
+      padding: 10px;
+      background: $darkGrey;
+      border: $dark 15px solid;
+
+      transition: background 0.2s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background: $midGrey;
+      }
+    }
+  }
+
+  #spacer {
+    flex:5%;
+  }
+}
+
 .sm-landing {
   @extend .landing;
   height: 20vh;
@@ -168,7 +203,7 @@ nav {
   }
 }
 
-#portfolio-page {
+#portfolio-page, #blog-post {
   margin-top: 35px;
   width: 50%;
 
@@ -188,4 +223,4 @@ nav {
     margin-bottom: 15px;
     font-size: 1.1em;
   }
-}
+} 

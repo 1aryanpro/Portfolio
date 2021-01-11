@@ -69,7 +69,6 @@ nav ul {
   overflow: hidden;
 }
 nav ul li {
-  padding: 14px 0;
   width: 120px;
 }
 nav ul li * {
@@ -79,7 +78,7 @@ nav ul li a {
   display: block;
   text-align: center;
   text-decoration: none;
-  padding: 14px 16px;
+  padding: 28px 16px;
   height: 100%;
 }
 nav ul li:not(.brand) {
@@ -94,6 +93,7 @@ nav ul li:not(.brand).active {
 }
 nav ul li.brand {
   float: left;
+  padding: 14px 0;
 }
 
 @keyframes rainbow-bg {
@@ -155,6 +155,35 @@ nav ul li.brand {
   font-weight: bolder;
 }
 
+#cta-cards {
+  display: flex;
+  height: 20vh;
+}
+#cta-cards .cta-card {
+  flex: 45%;
+  padding: 20px;
+  text-align: center;
+  background-image: url("/assets/stripes.jpg");
+}
+#cta-cards .cta-card h1 {
+  font-size: 3em;
+}
+#cta-cards .cta-card button {
+  font-size: 2em;
+  margin-top: 15px;
+  padding: 10px;
+  background: #222222;
+  border: #101010 15px solid;
+  transition: background 0.2s ease-in-out;
+  cursor: pointer;
+}
+#cta-cards .cta-card button:hover {
+  background: #494949;
+}
+#cta-cards #spacer {
+  flex: 5%;
+}
+
 .sm-landing {
   height: 20vh;
 }
@@ -183,21 +212,21 @@ nav ul li.brand {
   font-size: 1.75em;
 }
 
-#portfolio-page {
+#portfolio-page, #blog-post {
   margin-top: 35px;
   width: 50%;
 }
-#portfolio-page h1 {
+#portfolio-page h1, #blog-post h1 {
   font-size: 3.5em;
   font-weight: bold;
   text-align: center;
 }
-#portfolio-page img {
+#portfolio-page img, #blog-post img {
   width: 100%;
   height: 50vh;
   margin: 35px 0;
 }
-#portfolio-page p {
+#portfolio-page p, #blog-post p {
   margin-bottom: 15px;
   font-size: 1.1em;
 }
