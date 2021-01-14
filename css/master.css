@@ -212,6 +212,28 @@ nav ul li.brand {
   font-size: 1.75em;
 }
 
+#blog-post-list {
+  width: 60vw;
+}
+
+.post-card {
+  background-color: #222222;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.post-card img {
+  width: 200px;
+  height: 110px;
+}
+.post-card .title {
+  flex-grow: 100;
+  text-align: center;
+  font-size: 1.5em;
+}
+
 #portfolio-page, #blog-post {
   margin-top: 35px;
   width: 50%;
@@ -221,10 +243,15 @@ nav ul li.brand {
   font-weight: bold;
   text-align: center;
 }
-#portfolio-page img, #blog-post img {
+#portfolio-page #main-img, #blog-post #main-img {
   width: 100%;
   height: 50vh;
   margin: 35px 0;
+}
+#portfolio-page img:not(#main-img), #blog-post img:not(#main-img) {
+  width: 60%;
+  height: 30vh;
+  margin: 20px 20%;
 }
 #portfolio-page p, #blog-post p {
   margin-bottom: 15px;

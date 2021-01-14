@@ -203,6 +203,30 @@ nav {
   }
 }
 
+#blog-post-list {
+  width: 60vw;
+}
+
+.post-card {
+  background-color: $darkGrey;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  img {
+    width: 200px;
+    height: 110px;
+  }
+
+  .title {
+    flex-grow: 100;
+    text-align: center;
+    font-size: 1.5em;
+  }
+}
+
 #portfolio-page, #blog-post {
   margin-top: 35px;
   width: 50%;
@@ -213,10 +237,16 @@ nav {
     text-align: center;
   }
 
-  img {
+  #main-img {
     width: 100%;
     height: 50vh;
     margin: 35px 0;
+  }
+
+  img:not(#main-img) {
+    width: 60%;
+    height: 30vh;
+    margin: 20px 20%;
   }
 
   p {
